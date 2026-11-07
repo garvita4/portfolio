@@ -1,45 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="description" content="Garvita — building considered digital systems and solving problems through code.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
     <title>Garvita | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
-       
-        <canvas class="webgl"></canvas>
-       
-        <div class="ui">
-            <header class="header">
-                <div class="logo">/A Garvita.</div>
-                <nav class="nav">
-                    <a href="#work">Work</a>
-                    <a href="#about">About</a>
-                    <a href="#notes">Notes</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </header>
+        <header class="site-header">
+            <a class="wordmark" href="#top" aria-label="Garvita home">GARVITA<span>®</span></a>
+            <nav class="site-nav" aria-label="Primary">
+                <a class="nav-link" href="#work">Work</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-pill" href="#contact"><span class="nav-dot" aria-hidden="true"></span>Let's talk</a>
+                <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu <span class="menu-plus" aria-hidden="true">+</span></button>
+            </nav>
+        </header>
 
-            <section class="hero">
-                <div class="hero-content">
-                    <p class="label">BTECH . INFORMATION TECHNOLOGY</p>
-                    <h1 class="title">
-                        Building systems. <br>
-                        <span>Solving problems</span>
-                    </h1><p class="subtitle">
-                        I explore hardware, develop for the web, <br>
-                        and dive deep into algorithms.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#work" class="primary btn">View My Work</a>
-                        <a href="#about" class="btn secondary">About Me</a>
+        <main id="top">
+            <section class="hero" aria-labelledby="hero-title">
+                <canvas class="webgl" aria-hidden="true"></canvas>
+                <div class="hero-inner">
+                    <div class="hero-top" data-reveal>
+                        <p class="mono">Portfolio — 2026</p>
+                        <p class="mono">B.Tech · Information Technology</p>
+                    </div>
+
+                    <div class="hero-main">
+                        <h1 id="hero-title" data-reveal>Building systems.<br><span>Solving problems.</span></h1>
+                        <div class="hero-aside" data-reveal>
+                            <p>I'm Garvita — an IT student exploring hardware, web development, and algorithms. I like making complex things feel simple.</p>
+                            <a class="text-link" href="#work">See selected work <span aria-hidden="true">↓</span></a>
+                        </div>
+                    </div>
+
+                    <div class="hero-bottom" data-reveal>
+                        <p class="mono">Scroll to explore</p>
+                        <p class="mono">Open to opportunities</p>
                     </div>
                 </div>
             </section>
+
+            <section class="section about" id="about" aria-labelledby="about-title">
+                <div class="section-inner about-grid">
+                    <div class="about-main">
+                        <p class="section-label mono" data-reveal>01 — About</p>
+                        <h2 id="about-title" data-reveal>Curious by default.<br>Built with intention.</h2>
+                    </div>
+
+                    <div class="about-side">
+                        <p class="lead" data-reveal>I'm interested in the space between hardware and the web. I like breaking systems down, understanding how they work, and rebuilding them with more clarity.</p>
+
+                        <div class="about-panel" data-reveal>
+                            <div class="panel-row">
+                                <span>Currently</span>
+                                <span>B.Tech IT</span>
+                            </div>
+                            <div class="panel-row">
+                                <span>Focus</span>
+                                <span>Web &amp; systems</span>
+                            </div>
+                            <div class="panel-row">
+                                <span>Toolkit</span>
+                                <span>TypeScript · Three.js</span>
+                            </div>
+                            <div class="panel-row">
+                                <span>Status</span>
+                                <span>Open to opportunities</span>
+                            </div>
+                        </div>
+
+                        <a class="text-link" href="#work" data-reveal>More about the work <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section work" id="work" aria-labelledby="work-title">
+                <div class="section-inner">
+                    <div class="work-head">
+                        <div>
+                            <p class="section-label mono" data-reveal>02 — Selected work</p>
+                            <h2 id="work-title" data-reveal>A few things<br>I've been building.</h2>
+                        </div>
+                        <p class="work-note mono" data-reveal>Selected experiments<br>2024 — 2026</p>
+                    </div>
+                </div>
+
+                <div class="marquee" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span>Web · Systems · Algorithms · 3D · Design · Development ·</span>
+                        <span>Web · Systems · Algorithms · 3D · Design · Development ·</span>
+                    </div>
+                </div>
+
+                <div class="section-inner">
+                    <div class="project-grid">
+                        <a class="project" href="#contact" data-reveal>
+                            <div class="project-media project-media--one">
+                                <span class="project-index mono">01</span>
+                                <span class="project-orbit" aria-hidden="true"></span>
+                            </div>
+                            <div class="project-info">
+                                <div>
+                                    <p class="project-tags mono">Web · Design · Development</p>
+                                    <h3>Portfolio 2026</h3>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+
+                        <a class="project" href="#contact" data-reveal>
+                            <div class="project-media project-media--two">
+                                <span class="project-index mono">02</span>
+                                <span class="project-grid-lines" aria-hidden="true"></span>
+                            </div>
+                            <div class="project-info">
+                                <div>
+                                    <p class="project-tags mono">Web · Data structures</p>
+                                    <h3>Algorithm Visualizer</h3>
+                                </div>
+                                <span class="project-arrow" aria-hidden="true">↗</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <p class="work-footnote mono" data-reveal>More case studies available on request.</p>
+                </div>
+            </section>
+
+            <section class="contact" id="contact" aria-labelledby="contact-title">
+                <div class="section-inner">
+                    <p class="section-label mono" data-reveal>03 — Contact</p>
+                    <h2 id="contact-title" data-reveal>Have something<br><span>worth building?</span></h2>
+                    <a class="contact-link" href="mailto:hello@garvita.dev" data-reveal>Say hello <span aria-hidden="true">↗</span></a>
+
+                    <div class="footer-row">
+                        <p class="mono">© 2026 Garvita</p>
+                        <p class="mono">Designed &amp; built with intent</p>
+                        <a class="mono" href="#top">Back to top ↑</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="menu-overlay" id="menu" aria-hidden="true">
+            <div class="menu-head">
+                <a class="wordmark" href="#top">GARVITA<span>®</span></a>
+                <button class="menu-close" type="button" aria-label="Close menu">Close <span aria-hidden="true">×</span></button>
+            </div>
+            <nav class="menu-nav" aria-label="Menu">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="menu-foot mono">
+                <span>Portfolio — 2026</span>
+                <span>B.Tech · Information Technology</span>
+            </div>
         </div>
     </div>
-    <script type="module" src="/main.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>
