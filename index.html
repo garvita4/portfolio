@@ -1,52 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Your Name – Web, games & hardware</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/src/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Garvita –portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
+
 <body>
-<header>
-  <a href="#" class="logo" aria-label="Home">
-    <svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="13" fill="#ffe14d"/><rect class="eye" x="11" y="14" width="6" height="9" rx="3" fill="#10124a"/><rect class="eye" x="25" y="14" width="6" height="9" rx="3" fill="#10124a"/><path d="M12 28 Q21 36 30 28" stroke="#10124a" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
-    <span>yourname</span>
-  </a>
-  <nav aria-label="Main">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="cta">Say hello</a>
-  </nav>
-</header>
+    <header>
+        <a href="#" class="logo" aria-label="Home">
+            <svg viewBox="0 0 42 42" aria-hidden="true">
+                <rect width="42" height="42" rx="13" fill="#ffe14d" />
+                <rect class="eye" x="11" y="14" width="6" height="9" rx="3" fill="#10124a" />
+                <rect class="eye" x="25" y="14" width="6" height="9" rx="3" fill="#10124a" />
+                <path d="M12 28 Q21 36 30 28" stroke="#10124a" stroke-width="3.5" fill="none" stroke-linecap="round" />
+            </svg>
+            <span>GARVITA</span>
+        </a>
+        <nav aria-label="Main">
+            <a href="#work" id="navWork">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="cta">Say HI!</a>
+        </nav>
+    </header>
 
-<main class="hero">
-  <div>
-    <h1 id="name" aria-label="Your Name"></h1>
-    <p class="desc">I build websites, games and hardware. Sometimes all three in the same weekend.</p>
-  </div>
-  <div class="stage">
-    <div class="device" id="device">
-      <div class="bezel">
-        <div class="led"><i></i>power</div>
-        <div class="screen" id="screen">
-          <!-- Replace the svg and small with: <img src="your-photo.jpg" alt="Your Name"> -->
-          <em id="tag">web</em>
-          <svg viewBox="0 0 200 160" aria-hidden="true"><circle cx="100" cy="52" r="34" fill="#10124a"/><path d="M20 160 C20 100 60 92 100 92 C140 92 180 100 180 160Z" fill="#10124a"/></svg>
-          <small>Your photo goes here</small>
+    <main class="hero">
+        <div>
+            <h1 id="name" aria-label="Garvita"></h1>
+            <p class="desc">From pixels to physical circuits, I like building things that work.</p>
         </div>
-      </div>
-      <div class="controls">
-        <div class="dpad" aria-hidden="true"></div>
-        <div class="btns"><button type="button" id="a" aria-label="Next project type">A</button><button type="button" id="b" aria-label="Previous project type">B</button></div>
-      </div>
-    </div>
-    <p class="hint">Press A or B</p>
-  </div>
-</main>
+        <div class="stage">
+            <div class="device" id="device">
+                <div class="bezel">
+                    <div class="led"><i></i>power</div>
+                    <div class="screen" id="screen">
+                        <em>hello</em>
+                        <img src="pic.jpg" alt="Garvita">
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="dpad" id="dpad">
+                        <button type="button" class="up" aria-label="Show only my photo"></button>
+                        <button type="button" class="left" aria-label="Show only my photo"></button>
+                        <button type="button" class="right" aria-label="Show only my photo"></button>
+                        <button type="button" class="down" aria-label="Show only my photo"></button>
+                    </div>
+                    <div class="btns">
+                        <button type="button" data-open="web" aria-label="Open web projects">A</button>
+                        <button type="button" data-open="hardware" aria-label="Open hardware projects">B</button>
+                        <button type="button" data-open="games" aria-label="Open game projects">C</button>
+                    </div>
+                </div>
+            </div>
+            <p class="hint" id="hint">Press A, B or C. Press the plus for just me.</p>
+        </div>
+    </main>
 
-<script src="script.js"></script>
+    <section class="about" id="about">
+        <div class="wrap">
+            <p class="kicker">About</p>
+            <h2>Hi, I'm <span class="hl">Garvita</span>. I like making things that work and feel fun.</h2>
+            <div class="cols">
+                <p>I'm a 2nd year IT student, studying in Indraprastha University, Delhi, India. I'm interested in web
+                    development, game development, and hardware. I enjoy building projects, experimenting with
+                    new technologies, and learning by doing.</p>
+                <p>I'm currently looking to expand my skills, explore new areas of technology, and work on more
+                    challenging projects.</p>
+            </div>
+            <ul class="skills">
+                <li style="--c:var(--grey)"><b>DSA</b><span>cpp</span><a class="lc"
+                        href="https://leetcode.com/u/5Ai3CclLuw/" target="_blank" rel="noopener">LeetCode ↗</a></li>
+                <li style="--c:var(--pink)"><b>Web</b><span>HTML, CSS, JavaScript, nodejs, unity, react, .</span><button
+                        type="button" class="lc" data-open="web">See projects ↗</button></li>
+                <li style="--c:var(--mint)"><b>Hardware</b><span>Microcontrollers, sensors and circuits that do
+                        something real.</span><button type="button" class="lc" data-open="hardware">See projects
+                        ↗</button></li>
+                <li style="--c:var(--orange)"><b>Games</b><span>unity, c#</span><button type="button" class="lc"
+                        data-open="games">See projects ↗</button></li>
+                <li style="--c:#cbb8ff"><b>Sketching</b><span>When I’m not coding, I sketch.</span>
+                    <a class="lc" href="https://instagram.com/" target="_blank" rel="noopener">See sketches ↗</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="wrap">
+            <p class="kicker">Contact</p>
+            <h2>Let's make something.</h2>
+            <a class="mail" href="mailto:garvitaa1@gmail.com">garvitaa1@gmail.com</a>
+            <div class="links">
+                <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+                <a class="pill" href="https://github.com/garvita4" target="_blank" rel="noopener">GitHub</a>
+                <a class="pill" href="https://www.linkedin.com/in/garvita-arora-2894b7341/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a class="pill" href="https://x.com/Garvita_Arora_" target="_blank" rel="noopener">X</a>
+                <a class="pill" href="https://leetcode.com/u/5Ai3CclLuw/" target="_blank" rel="noopener">LeetCode</a>
+                <a class="pill" href="https://www.instagram.com/cursed_compiler_200/" target="_blank"
+                    rel="noopener">Instagram</a>
+            </div>
+            <p class="copy">&copy; 2026 Garvita</p>
+        </div>
+    </section>
+
+    <div class="big" id="big" role="dialog" aria-modal="true" aria-label="Projects" hidden>
+        <div class="big-inner">
+            <div class="topbar">
+                <div class="tabs" role="tablist" aria-label="Project types">
+                    <button type="button" class="tab" role="tab" data-open="web"><b>A</b>Web</button>
+                    <button type="button" class="tab" role="tab" data-open="hardware"><b>B</b>Hardware</button>
+                    <button type="button" class="tab" role="tab" data-open="games"><b>C</b>Games</button>
+                </div>
+                <button type="button" class="exit" id="exit">Close</button>
+            </div>
+            <div class="views" id="views">
+                <section class="view menu" id="menu">
+                    <h2 id="mtitle"></h2>
+                    <div class="grid" id="grid"></div>
+                    <p class="foot">Tap a project, or use the arrow keys and Enter. Esc goes back.</p>
+                </section>
+                <article class="project" id="project" aria-live="polite"></article>
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/script.js"></script>
 </body>
+
 </html>
