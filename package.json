@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:test": "esbuild src/test-main.ts --bundle --format=iife --target=es2020 --outfile=test.bundle.js"
   },
   "devDependencies": {
     "@types/three": "^0.187.0",

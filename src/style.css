@@ -257,16 +257,21 @@ button {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 72% 38%, rgba(26, 47, 251, 0.14), transparent 42%);
+  background: radial-gradient(circle at 72% 44%, rgba(26, 47, 251, 0.10) 0%, rgba(240, 241, 250, 0) 55%);
 }
 
 .webgl {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   width: 100% !important;
   height: 100% !important;
   display: block;
+  cursor: grab;
+}
+
+.webgl:active {
+  cursor: grabbing;
 }
 
 .hero-inner {
@@ -276,7 +281,7 @@ button {
   max-width: var(--max);
   min-height: 100svh;
   margin: 0 auto;
-  padding: clamp(10rem, 15vh, 13rem) var(--gutter) clamp(2.4rem, 4vh, 3.6rem);
+  padding: clamp(8rem, 11vh, 10rem) var(--gutter) clamp(1.8rem, 3vh, 2.6rem);
   display: grid;
   grid-template-rows: auto 1fr auto;
   pointer-events: none;
@@ -284,7 +289,8 @@ button {
 
 .hero-inner a,
 .hero-inner p,
-.hero-inner h1 {
+.hero-inner h1,
+.hero-inner button {
   pointer-events: auto;
 }
 
@@ -298,16 +304,23 @@ button {
 
 .hero-main {
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(28rem, 0.5fr);
-  align-items: end;
-  gap: clamp(3rem, 6vw, 8rem);
-  padding-bottom: clamp(3rem, 7vh, 7rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 6rem);
+  padding: clamp(1rem, 2vh, 2.5rem) 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 3.5vh, 3.4rem);
+  max-width: 58rem;
 }
 
 .hero h1 {
-  font-size: clamp(4.6rem, 8vw, 9.8rem);
+  font-size: clamp(4.6rem, 7.8vw, 9.4rem);
   font-weight: 500;
-  line-height: 0.88;
+  line-height: 0.90;
   letter-spacing: -0.065em;
   text-wrap: balance;
 }
@@ -317,9 +330,7 @@ button {
 }
 
 .hero-aside {
-  max-width: 36rem;
-  justify-self: end;
-  padding-bottom: 0.8rem;
+  max-width: 44rem;
 }
 
 .hero-aside p {
@@ -332,7 +343,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   color: var(--ink);
   font-family: var(--mono);
   font-size: 1.05rem;
@@ -805,7 +816,13 @@ button {
   }
 
   .hero-inner {
-    padding-top: 9rem;
+    padding-top: 8rem;
+    min-height: 100svh;
+  }
+
+  .hero-main {
+    padding-top: 36vh;
+    padding-bottom: 2rem;
   }
 
   .hero-top p:last-child,
