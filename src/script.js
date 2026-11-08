@@ -4,6 +4,8 @@
   var NAME = "GARVITA\nARORA";
 
   var DATA = {
+    
+    
     web: {
       title: "Web projects",
       color: "#ffb3e1",
@@ -13,6 +15,7 @@
           desc: "A cinematic journey through city streets worldwide. Explore, tune into local radio, and experience each city by car or by foot.",
           tags: ["HTML", "CSS", "JavaScript"],
           link: "https://roads-untaken.vercel.app/",
+          image: "/roadsuntaken.png",
         },
         {
           title: "PROJECT VOID",
@@ -37,18 +40,21 @@
           desc: "a custom split keyboard with the 1.8inch tft diaply and rotatory encoder and also with nfc based lock system with controlable backlight.",
           tags: ["Arduino", "Sensors", "ESP32"],
           link: "https://github.com/garvita4/split-keyboard",
+          image: "/keyboard.png",
         },
         {
           title: "synthesizer",
           desc: "A portable standalone digital synthesizer and musical workstation featuring a 30-key hot-swap mechanical keyboard, 5x EC11 rotatory encoders, and a vibrant TFT display.",
           tags: ["ESP32", "C++"],
           link: "https://github.com/garvita4/synthesizer",
+          image: "/synth.png",
         },
         {
           title: "LORA",
           desc: "A long range communication device using an SX1262 radio module and RP2040 microcontroller for wireless signal transmission and reception over ISM radio frequencies.",
           tags: ["Raspberry Pi", "Python"],
           link: "https://github.com/garvita4/loRa-puck",
+          image: "/lora.png",
         },
       ],
     },
@@ -263,7 +269,11 @@
       esc(link) +
       '" target="_blank" rel="noopener">Open project</a>' +
       '<button type="button" class="pill back">Back</button></div></div>' +
-      '<div class="shot" aria-hidden="true"><div class="dots"><i></i><i></i><i></i></div><span>Screenshot or demo goes here</span></div>';
+            '<div class="shot"><div class="dots"><i></i><i></i><i></i></div>' +
+      (it.image
+        ? '<img src="' + esc(it.image) + '" alt="' + esc(it.title) + ' screenshot">'
+        : '<span>Screenshot or demo goes here</span>') +
+      '</div>';;
 
     var vr = $("#views").getBoundingClientRect(),
       cr = cards[i].getBoundingClientRect();
