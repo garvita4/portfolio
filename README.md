@@ -1,4 +1,6 @@
 # GARVITA'S PORTFOLIO
+https://portfolio-git-main-qwerty-4894.vercel.app/
+
 A playful personal portfolio for a 2nd year IT student, built to showcase major projects.
 The hero is a small handheld console that you can actually play with: press a button and you can see the work.
 
@@ -13,5 +15,3 @@ The hero is a small handheld console that you can actually play with: press a bu
 - HTML, CSS and JavaScript, with no UI framework.
 - Vite for the dev server and build.
 - Google Fonts(Bricolage Grotesque).
-
-https://portfolio-git-main-qwerty-4894.vercel.app/
